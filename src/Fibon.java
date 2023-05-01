@@ -23,8 +23,8 @@ public class Fibon implements AM {
           m = new Long(in.readLine()).longValue();
       } catch (IOException e) {e.printStackTrace(); return;}
 
-      point p[10];
-      channel c[10];
+      point[] p = new point[10];
+      channel c = new channel[10];
       for (int i=0; i<10; i++)
       {
           p[i] = info.createPoint();
