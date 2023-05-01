@@ -43,10 +43,12 @@ public class Fibon implements AM {
         for (int i=0; i<k; i++)
         {
             r1 = c[i].readLong();
+            System.out.println(r1);
             r = r * r1;
+            r = r % m;
         }
+        System.out.println(r);
 
-        //System.out.println("F"+n+"="+r);
         try{
             PrintWriter out = new PrintWriter(new FileWriter(info.curtask.addPath("Fibon.res")));
             out.println(r);

@@ -13,9 +13,9 @@ public class Fib implements AM{
         System.out.println(i0 + "th thread");
 
         r = 1;
-        for (long i=i0; i<=n; i+=k)
+        for (long i=i0; i<n; i+=k)
         {
-            r = r*i%m;
+            r = r*(i+1)%m;
         }
         info.parent.write(r);
     }
