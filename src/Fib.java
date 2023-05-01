@@ -5,6 +5,7 @@ public class Fib implements AM{
         long n,m,i0,k,r;
         r = 1;
         System.out.println("here");
+        /*
         info.parent.write(r);
         n = info.parent.readLong();
         m = info.parent.readLong();
@@ -14,6 +15,7 @@ public class Fib implements AM{
         {
             r = r*(i+1)%m;
         }
+        */
         info.parent.write(r);
     }
 }
