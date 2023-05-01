@@ -5,13 +5,11 @@ public class Fib implements AM{
         long n,m,i0,k,r;
 
         System.out.println("entering run1");
-        n = info.parent.readLong();
-        System.out.println("entering run2");
-        m = info.parent.readLong();
-        System.out.println("entering run3");
-        i0 = info.parent.readLong();
-        System.out.println("entering run4");
-        k = info.parent.readLong();
+        Data data = (Data)info.parent.readObject();
+        n = data.n;
+        m = data.m;
+        i0 = data.i0;
+        k = data.k;
         System.out.println(i0 + "th thread");
 
         r = 1;
