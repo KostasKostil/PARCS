@@ -7,7 +7,9 @@ public class Fib implements AM{
         n = 8;
         m = 1000;
         k = 4;
-        i0= info.parent.readLong();
+
+        System.out.println("entering run");
+        i0 = info.parent.readLong();
         System.out.println(i0 + "th thread");
 
         r = 1;
