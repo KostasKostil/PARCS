@@ -20,7 +20,7 @@ public class Fibon implements AM {
             p[i] = info.createPoint();
             c[i] = p[i].createChannel();
             p[i].execute("Fib");
-            c[i].write(i);
+            c[i].write(i+1);
         }
         
         System.out.println("Waiting for result...");
