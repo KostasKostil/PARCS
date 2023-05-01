@@ -38,7 +38,7 @@ public class Fibon implements AM {
       long r = 1;
       for (int i=0; i<10; i++)
       {
-          r = c[i].ReadLong(i);
+          r = c[i].readLong();
           System.out.println(r);
       }
 
