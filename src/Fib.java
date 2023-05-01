@@ -9,7 +9,7 @@ public class Fib implements AM{
         k = info.parent.readLong();
         r = 1;
 
-        for (int i=i0; i<n; i+=k)
+        for (long i=i0; i<n; i+=k)
         {
             r = r*(i+1)%m;
         }
