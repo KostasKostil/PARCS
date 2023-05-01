@@ -11,7 +11,17 @@ public class Fibon implements AM {
     }
 
     public void run(AMInfo info) {
-
+        long n, m;
+        try {
+          /*byte[] buf = new byte[200];
+          System.out.print("Enter n: ");
+          System.in.read(buf);
+          n=new Long(new String(buf).trim()).longValue();*/
+            BufferedReader in = new BufferedReader(new FileReader(info.curtask.findFile("Fibon.data")));
+            n = new Long(in.readLine()).longValue();
+            m = new Long(in.readLine()).longValue();
+        } catch (IOException e) {e.printStackTrace(); return;}
+        
         int k = 4;
         point[] p = new point[k];
         channel[] c = new channel[k];
@@ -20,9 +30,9 @@ public class Fibon implements AM {
             p[i] = info.createPoint();
             c[i] = p[i].createChannel();
             p[i].execute("Fib");
-            c[i].write(i);
             c[i].write(n);
             c[i].write(m);
+            c[i].write(i);
             c[i].write(k);
         }
         
