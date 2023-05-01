@@ -30,7 +30,7 @@ public class Fibon implements AM {
             p[i] = info.createPoint();
             c[i] = p[i].createChannel();
             p[i].execute("Fib");
-            Data d = new Data(n, m, i, k);
+            Data d = new Data(n, m, long(i), long(k));
             c[i].write(d);
         }
         
