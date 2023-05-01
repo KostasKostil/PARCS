@@ -2,15 +2,14 @@ import parcs.*;
 
 public class Fib implements AM{
     public void run(AMInfo info){
-        long n,r1,r2,r;
+        long n,m,r1,r2,r;
         n = info.parent.readLong();
-
+        m = info.parent.readLong();
         //System.out.println("n="+n);
         if (n<2) r=n;
         else {
             point p1 = info.createPoint();
             channel c1 = p1.createChannel();
-
             p1.execute("Fib");
             c1.write(n-2);
             point p2 = info.createPoint();
