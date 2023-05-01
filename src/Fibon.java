@@ -15,12 +15,11 @@ public class Fibon implements AM {
         int k = 4;
         point[] p = new point[k];
         channel[] c = new channel[k];
-        for (int i=0; i<k; i++)
-        {
+        for (int i=0; i<k; i++) {
             p[i] = info.createPoint();
             c[i] = p[i].createChannel();
-            p[i].execute("Fib");
             c[i].write(i);
+            p[i].execute("Fib");
         }
         
         System.out.println("Waiting for result...");
