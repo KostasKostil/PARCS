@@ -38,10 +38,11 @@ public class Fibon implements AM {
         
         System.out.println("Waiting for result...");
         long r = 1;
+        long r1 = 1;
         for (int i=0; i<k; i++)
         {
-            r = c[i].readLong();
-            System.out.println(r);
+            r1 = c[i].readLong();
+            r = r * r1;
         }
 
         //System.out.println("F"+n+"="+r);
