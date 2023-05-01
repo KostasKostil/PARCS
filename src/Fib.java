@@ -6,7 +6,6 @@ public class Fib implements AM{
         r = 1;
         info.parent.write(r);
         n = info.parent.readLong();
-        println(n);
         m = info.parent.readLong();
         i0= info.parent.readLong();
         k = info.parent.readLong();
