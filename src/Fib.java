@@ -4,15 +4,12 @@ public class Fib implements AM{
     public void run(AMInfo info){
         long n,m,i0,k,r;
 
-        System.out.println("here1");
-        n = info.parent.readLong();
-        System.out.println("here2" + n);
-        m = info.parent.readLong();
-        System.out.println("here3" + m);
+        n = 8;
+        m = 1000;
+        k = 4;
         i0= info.parent.readLong();
-        System.out.println("here4" + i0);
-        k = info.parent.readLong();
-        System.out.println("here5");
+        System.out.println(i0 + "th thread");
+
         r = 1;
         for (long i=i0; i<n; i+=k)
         {
