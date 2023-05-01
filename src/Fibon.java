@@ -22,7 +22,7 @@ public class Fibon implements AM {
             m = new Long(in.readLine()).longValue();
         } catch (IOException e) {e.printStackTrace(); return;}
         
-        int k = 4;
+        int k = 20;
         point[] p = new point[k];
         channel[] c = new channel[k];
         for (int i=0; i<k; i++)
