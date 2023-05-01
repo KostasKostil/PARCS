@@ -20,6 +20,7 @@ public class Fibon implements AM {
 
             BufferedReader in = new BufferedReader(new FileReader(info.curtask.findFile("Fibon.data")));
             n = new Long(in.readLine()).longValue();
+            m = new Long(in.readLine()).longValue();
         } catch (IOException e) {e.printStackTrace(); return;}
 
         int k = 4;
