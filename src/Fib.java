@@ -6,11 +6,11 @@ public class Fib implements AM{
 
         System.out.println("here1");
         n = info.parent.readLong();
-        System.out.println("here2");
+        System.out.println("here2" + n);
         m = info.parent.readLong();
-        System.out.println("here3");
+        System.out.println("here3" + m);
         i0= info.parent.readLong();
-        System.out.println("here4");
+        System.out.println("here4" + i0);
         k = info.parent.readLong();
         System.out.println("here5");
         r = 1;
