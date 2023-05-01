@@ -23,26 +23,25 @@ public class Fibon implements AM {
           m = new Long(in.readLine()).longValue();
       } catch (IOException e) {e.printStackTrace(); return;}
 
-      point[] p = new point[10];
-      channel[] c = new channel[10];
-      for (int i=0; i<10; i++)
+      int k = 10;
+      point[] p = new point[k];
+      channel[] c = new channel[k];
+      for (int i=0; i<k; i++)
       {
           p[i] = info.createPoint();
           c[i] = p[i].createChannel();
           p[i].execute("Fib");
           c[i].write(n);
           c[i].write(i);
-          System.out.println("x...");
+      }
+      System.out.println("Waiting for result...");
+      long r = 1;
+      for (int i=0; i<10; i++)
+      {
+          r = c[i].ReadLong(i);
+          System.out.println(r);
       }
 
-      point p1 = info.createPoint();
-      channel c1 = p1.createChannel();
-      p1.execute("Fib");
-      c1.write(n);
-      c1.write(m);
-
-      System.out.println("Waiting for result...");
-      long r = c1.readLong();
       System.out.println("Result found.");
 
       //System.out.println("F"+n+"="+r);
