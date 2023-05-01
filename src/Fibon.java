@@ -11,7 +11,7 @@ public class Fibon implements AM {
     }
 
     public void run(AMInfo info) {
-        long n;
+        long n, m;
         try {
           /*byte[] buf = new byte[200];
           System.out.print("Enter n: ");
